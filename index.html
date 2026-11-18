@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QYVORA | One Platform. Unlimited Possibilities.</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b16;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    border-bottom: 1px solid #20243a;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #8c79ff;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #9c8aff;
+}
+
+.hero {
+    text-align: center;
+    padding: 110px 20px 80px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #6555c9;
+    padding: 9px 18px;
+    border-radius: 30px;
+    color: #b4a8ff;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 75px);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #9583ff;
+}
+
+.hero p {
+    color: #a9afc4;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: auto;
+}
+
+.buttons {
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 9px;
+    text-decoration: none;
+    margin: 7px;
+    font-weight: bold;
+}
+
+.primary {
+    background: #7561f6;
+    color: white;
+}
+
+.secondary {
+    border: 1px solid #514b79;
+    color: white;
+}
+
+.section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.section > p {
+    color: #a9afc4;
+    margin-bottom: 35px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111629;
+    border: 1px solid #252c48;
+    border-radius: 15px;
+    padding: 27px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #8875ff;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #a9afc4;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.card button {
+    margin-top: 20px;
+    padding: 10px 17px;
+    border: none;
+    border-radius: 7px;
+    background: #7561f6;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 35px;
+    color: #858ba1;
+    border-top: 1px solid #20243a;
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 75px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">QYVORA.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+
+    <div class="badge">✦ THE NEXT DIGITAL GENERATION</div>
+
+    <h1>Welcome to <span>QYVORA</span></h1>
+
+    <p>
+        One platform. Unlimited possibilities.
+        Discover a new digital world where artificial intelligence,
+        creativity and technology come together.
+    </p>
+
+    <div class="buttons">
+        <a href="#features" class="btn primary">Explore QYVORA</a>
+        <a href="#about" class="btn secondary">Discover More</a>
+    </div>
+
+</section>
+
+<section class="section" id="features">
+
+    <h2>Explore Our Universe</h2>
+    <p>Powerful tools. One connected digital world.</p>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="icon">🤖</div>
+            <h3>QYVORA AI</h3>
+            <p>Your intelligent AI assistant for ideas, learning and creativity.</p>
+            <button onclick="openTool('AI Assistant')">Explore</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎬</div>
+            <h3>Video Studio</h3>
+            <p>Turn your creative ideas into AI-powered videos.</p>
+            <button onclick="openTool('AI Video Studio')">Explore</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Website Builder</h3>
+            <p>Create websites using your imagination and AI assistance.</p>
+            <button onclick="openTool('Website Builder')">Explore</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎨</div>
+            <h3>Image Studio</h3>
+            <p>Create and edit amazing digital images.</p>
+            <button onclick="openTool('Image Studio')">Explore</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">💬</div>
+            <h3>QYVORA Connect</h3>
+            <p>Connect and communicate with people.</p>
+            <button onclick="openTool('Connect')">Explore</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>QYVORA Learn</h3>
+            <p>Learn new skills and explore educational resources.</p>
+            <button onclick="openTool('Learn')">Explore</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎮</div>
+            <h3>QYVORA Play</h3>
+            <p>Discover games and enjoy entertainment.</p>
+            <button onclick="openTool('Play')">Explore</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">☁️</div>
+            <h3>QYVORA Cloud</h3>
+            <p>Organize your digital files and projects.</p>
+            <button onclick="openTool('Cloud')">Explore</button>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="about">
+    <h2>A New Digital World</h2>
+    <p>
+        QYVORA is our vision of a connected digital ecosystem.
+        We are building a platform where imagination meets technology.
+    </p>
+</section>
+
+<footer>
+    <div class="logo">QYVORA.</div>
+    <p>One Platform. Unlimited Possibilities.</p>
+    <br>
+    © 2026 QYVORA. All rights reserved.
+</footer>
+
+<script>
+function openTool(name) {
+    alert(name + " is coming soon to QYVORA!");
+}
+</script>
+
+</body>
+</html>
