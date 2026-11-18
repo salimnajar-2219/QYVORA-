@@ -96,7 +96,8 @@
     </div>
 
     <script>
-        const apiKey = "PASTE_YOUR_OPENAI_API_KEY_HERE"; // Put your OpenAI API key here
+        // Yahan apni OpenAI API key daal sakte hain (jaise: "sk-proj-...")
+        const apiKey = "PASTE_YOUR_OPENAI_API_KEY_HERE";
 
         async function sendMessage() {
             const inputField = document.getElementById('user-input');
@@ -140,8 +141,10 @@
                 const data = await response.json();
                 if (data.choices && data.choices.length > 0) {
                     aiMsgDiv.textContent = data.choices[0].message.content;
+                } else if (data.error) {
+                    aiMsgDiv.textContent = "API Error: " + data.error.message;
                 } else {
-                    aiMsgDiv.textContent = "An error occurred. Please try again.";
+                    aiMsgDiv.textContent = "An error occurred. Please check your API key.";
                 }
             } catch (error) {
                 aiMsgDiv.textContent = "Connection error: Unable to reach the AI server.";
@@ -160,3 +163,4 @@
 
 </body>
 </html>
+
